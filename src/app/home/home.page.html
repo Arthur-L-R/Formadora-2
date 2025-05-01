@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">
+      Apresentação
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="home-content">
+  <div class="content-wrapper">
+    <h2>Pokédex Interativa</h2>
+    <p>Bem-vindo(a) ao aplicativo Pokédex Interativa,
+      que lhe proporcionará uma forma simples, 
+      rápida e envolvente de explorar o universo dessa franquia tão amada.
+    </p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button color="medium" routerLink="/lista-pokemon">
+      Ir a Lista
+    </ion-button>
+    <ion-button color="warning" routerLink="/sobre">
+      Saiba Mais
+    </ion-button>
   </div>
-</ion-content>
+  </ion-content>

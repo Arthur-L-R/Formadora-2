@@ -1,27 +1,33 @@
-#container {
+.home-content {
+  --background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  .content-wrapper {
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+  }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+  .logo {
+    width: 180px;
+    margin-bottom: 20px;
+  }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+  h2 {
+    color: #e60012; // Cor vermelha da Pokébola
+    font-weight: bold;
+  }
 
-  color: #8c8c8c;
+  p {
+    font-size: 1.1em;
+    margin-bottom: 24px;
+    color: #333;
+  }
 
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  ion-button {
+    margin-top: 10px;
+  }
 }

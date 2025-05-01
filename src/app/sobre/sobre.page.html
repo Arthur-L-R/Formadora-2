@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">
+      Sobre a API
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="home-content">
+  <div class="content-wrapper">
+    <h2>Sobre a PokéAPI</h2>
+    <p>
+      Este aplicativo consome dados diretamente da <strong>PokéAPI</strong>, uma API pública gratuita com
+      uma vasta base de dados da franquia Pokémon.
+    </p>
+
+    <p>
+      Com ela, é possível acessar informações como nomes, habilidades, evoluções, tipos e sprites dos Pokémons.
+      A PokéAPI é mantida pela comunidade e pode ser utilizada livremente para fins de estudo e desenvolvimento.
+    </p>
+
+    <p>
+      Acesse a documentação completa em: <br />
+      <a href="https://pokeapi.co" target="_blank">https://pokeapi.co</a>
+    </p>
+
+    <ion-button color="medium" routerLink="/home">
+      Voltar a Home
+    </ion-button>
+    <ion-button color="warning" routerLink="/lista-pokemon">
+      Ir a Lista
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">Lista de Pokémons</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="home-content">
+  <ion-grid>
+    <ion-row>
+      <h1><strong>Pokémons:</strong></h1>
+    </ion-row>
+
+    <ion-row *ngFor="let pokemon of pokemons">
+      <ion-col size="12">
+        <ion-item button (click)="showPokemon(pokemon.id)">
+          <ion-thumbnail slot="start">
+            <img [src]="pokemon.image" alt="{{ pokemon.name }}">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{ pokemon.name | titlecase }}</h3>
+          </ion-label>
+        </ion-item>
+
+        <!-- Detalhes abaixo -->
+        <ion-card *ngIf="selectedPokemonId === pokemon.id">
+          <ion-card-header>
+            <ion-card-title>Habilidades</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list *ngIf="abilitiesMap[pokemon.id]">
+              <ion-item *ngFor="let ability of abilitiesMap[pokemon.id]">
+                {{ ability | titlecase }}
+              </ion-item>
+            </ion-list>
+            <p *ngIf="!abilitiesMap[pokemon.id]">Carregando habilidades...</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="content-wrapper">
+    <ion-button color="medium" routerLink="/home">
+      Voltar a Home 
+    </ion-button>
+    <ion-button color="warning" routerLink="/sobre">
+      Saiba Mais
+    </ion-button>
+  </div>
+</ion-content>
